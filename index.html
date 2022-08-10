@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Dropdown Menu</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="menu-area">
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a>
+                    <ul class="dropdown-1">
+                        <li><a href="#">Logo Design</a></li>
+                        <li><a href="#">WebDesign</a></li>
+                        <li><a href="#">Web Development</a>
+                            <ul class="dropdown-2">
+                                <li><a href="#">PHP</a></li>
+                                <li><a href="#">Laravel</a></li>
+                                <li><a href="#">Worpress</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Portfolio</a>
+                    <ul class="dropdown-3">
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Backend</a></li>
+                        <li><a href="#">FullStack</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+        <div class="banner-area">
+            <h2>We Are Creative</h2>
+        </div>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                const nav = document.querySelector('.menu-area');
+                nav.classList.toggle("sticky", window.scrollY > 70)
+            })
+        </script>
+    </body>
+
+</html>
